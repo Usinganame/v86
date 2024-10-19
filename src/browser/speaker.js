@@ -77,8 +77,8 @@ function SpeakerMixer(bus, audio_context)
     this.sources = new Map();
 
     // States
-
-    this.volume_both = 1;
+    let speaker_volume = document.getElementsByTagId("volume");
+    this.volume_both = (speaker_volume / 100);
     this.volume_left = 1;
     this.volume_right = 1;
     this.gain_left = 1;
